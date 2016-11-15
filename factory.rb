@@ -1,6 +1,5 @@
 class Factory
   attr_reader :name, :max_storage, :level, :experience, :exp_to_next_level
-  attr_reader :storages
 
   def initialize(name, max_storage = 5)
     @name = name
@@ -18,6 +17,15 @@ class Factory
     @storages << storage
   end
 
+  def storages
+    names = ''
+    @storages.each do |storage|
+      ", " if !names.empty?
+      names += storage.name
+    end
+    names
+  end
+  
   private
 
   def get_storage_name(name)

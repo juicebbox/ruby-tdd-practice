@@ -39,10 +39,9 @@ describe Factory do
       factory.add_storage
     end
 
-    it "can show all storages" do
+    it "can show all storages' names" do
       factory.add_storage
-      expect(factory.storages[0].name).to eq 'Test Factory Storage'
-      expect(factory.storages[0].size).to eq 5
+      expect(factory.storages).to eq 'Test Factory Storage'
     end
   end
 end
