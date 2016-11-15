@@ -4,6 +4,7 @@
 # I use it as './cheapwatch.sh rspec test.rb -r ./factory.rb -c -f doc'
 #
 
+#posted on stackoverflow by Kaz
 #!/bin/sh
 
 # Not quite your Rolex
