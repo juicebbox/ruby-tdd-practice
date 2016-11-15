@@ -16,6 +16,34 @@ describe Factory do
     it "can show it's name" do
       expect(factory.name).to eq 'Test Factory'
     end
+
+    it "can have level" do
+      expect(factory.level).to eq 1
+    end
+
+    it "can have maximum storage size" do
+      expect(factory.max_storage).to eq 5
+    end
+
+    it "can have production experience" do
+      expect(factory.experience).to eq 0
+    end
+
+    it "can show how much experience is needed to next level" do
+      expect(factory.exp_to_next_level).to eq 100
+    end
+  end
+
+  context 'storage' do
+    it "can add a new storage" do
+      factory.add_storage
+    end
+
+    it "can show all storages" do
+      factory.add_storage
+      expect(factory.storages[0].name).to eq 'Test Factory Storage'
+      expect(factory.storages[0].size).to eq 5
+    end
   end
 end
 
@@ -35,7 +63,7 @@ describe Storage do
     it 'can be accessed' do
       expect(storage.size).to eq 0
     end
-    
+
     it 'can be changed' do
       storage.size = 10
       expect(storage.size).to eq 10

@@ -14,5 +14,5 @@ while true ; do
   printf "[%s] Output of %s:\n" "$(date)" "$*"
   # "$@" <- we don't want to do it this way, just this:
   ${SHELL-/bin/sh} -c "$*"
-  sleep 10  # genuine Quartz movement
+  sleep 5  # genuine Quartz movement
 done
